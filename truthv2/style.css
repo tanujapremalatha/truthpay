@@ -1,0 +1,35 @@
+/* ============================================================
+   Verity — Custom Styles
+   (Tailwind handles utility classes; this file covers
+   the custom animations and font assignments.)
+   ============================================================ */
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #09090b;
+  color: #f4f4f5;
+}
+
+.mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* ---- Verdict pop-in animation ---- */
+@keyframes popIn {
+  0%   { transform: scale(0.92); opacity: 0; }
+  100% { transform: scale(1);    opacity: 1; }
+}
+
+.animate-verdict {
+  animation: popIn 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* ---- OCR scanning pulse ---- */
+@keyframes pulseScan {
+  0%, 100% { opacity: 0.4; }
+  50%       { opacity: 1;   }
+}
+
+.scanning-bar {
+  animation: pulseScan 1.1s ease-in-out infinite;
+}
